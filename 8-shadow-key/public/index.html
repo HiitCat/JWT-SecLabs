@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas - Sign in</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e11d48'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>8</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Atlas
+    </div>
+    <h1>Welcome back</h1>
+    <p class="subtitle">Sign in to the Atlas access management platform</p>
+    <div id="error" class="alert error hidden"></div>
+    <form id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="yourname" autocomplete="username" autofocus required>
+      </div>
+      <button type="submit" class="btn-primary" id="submit-btn">Sign in</button>
+    </form>
+    <p class="auth-footer">Atlas Access Management &mdash; internal use only</p>
+  </div>
+  <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeyForge - Sign in</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>6</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+      </svg>
+      KeyForge
+    </div>
+    <h1>Welcome back</h1>
+    <p class="subtitle">Sign in to manage your signing keys</p>
+    <div id="error" class="alert error hidden"></div>
+    <form id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="yourname" autocomplete="username" autofocus required>
+      </div>
+      <button type="submit" class="btn-primary" id="submit-btn">Sign in</button>
+    </form>
+    <p class="auth-footer">KeyForge Key Management Platform &mdash; internal use only</p>
+  </div>
+  <script src="/js/login.js"></script>
+</body>
+</html>

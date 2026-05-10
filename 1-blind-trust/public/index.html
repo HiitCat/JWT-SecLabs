@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian - Sign in</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230891b2'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>1</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      Meridian
+    </div>
+    <h1>Welcome back</h1>
+    <p class="subtitle">Sign in to your analytics workspace</p>
+    <div id="error" class="alert error hidden"></div>
+    <form id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="alice" autocomplete="username" required>
+      </div>
+      <button class="btn-primary" id="submit-btn" type="submit">Sign in</button>
+    </form>
+    <div class="auth-footer">Meridian Analytics Platform &mdash; internal use only</div>
+  </div>
+  <script src="/js/login.js"></script>
+</body>
+</html>

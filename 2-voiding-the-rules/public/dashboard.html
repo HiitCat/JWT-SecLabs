@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StaffHub - Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23f85149'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>2</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-page">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      StaffHub
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/dashboard.html" class="nav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        My Team
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Time Off
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Performance
+      </a>
+
+      <div class="nav-section">HR Administration</div>
+      <a href="/admin.html" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        HR Admin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar" id="avatar">?</div>
+        <div class="user-chip-info">
+          <div class="user-chip-name" id="chip-name">Loading…</div>
+          <div class="user-chip-role" id="chip-role">employee</div>
+        </div>
+      </div>
+      <button class="btn-ghost" id="logout-btn" style="width:100%">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-header">
+      <h1>Welcome back, <span id="welcome-name">…</span></h1>
+    </div>
+
+    <div class="announcement">
+      <strong>📢 Company Announcement</strong> - All-hands meeting this Friday at 10:00 AM. Attendance is mandatory. See the calendar for the video link.
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Days off remaining</div>
+        <div class="stat-value">12</div>
+        <div class="stat-sub">out of 25 days</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pending reviews</div>
+        <div class="stat-value">3</div>
+        <div class="stat-sub">due this month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Team members</div>
+        <div class="stat-value">8</div>
+        <div class="stat-sub">in your department</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Recent Activity</div>
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Event</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2024-03-18</td><td>Time off approved</td><td>March 25–29</td></tr>
+          <tr><td>2024-03-12</td><td>Review submitted</td><td>Q1 Self-Assessment</td></tr>
+          <tr><td>2024-03-01</td><td>Profile updated</td><td>Department change</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

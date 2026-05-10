@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeyForge - Token Vault</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>6</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-page">
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 7L10 17l-5-5"/>
+      </svg>
+      CertFlow
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/dashboard.html" class="nav-item">Integration Dashboard</a>
+      <a href="#" class="nav-item">Token Health</a>
+      <a href="#" class="nav-item">Signature Audit</a>
+      <a href="#" class="nav-item">Partner Logs</a>
+
+      <div class="nav-section">Administration</div>
+      <a href="/admin.html" class="nav-item active">Key Vault</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar" id="avatar">?</div>
+        <div class="user-chip-info">
+          <div class="user-chip-name" id="chip-name">Loading...</div>
+          <div class="user-chip-role" id="chip-role">analyst</div>
+        </div>
+      </div>
+      <button class="btn-ghost" id="logout-btn" style="width:100%">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="status-page" id="view-denied">
+      <div class="status-icon">🔒</div>
+      <h2>Access Restricted</h2>
+      <p>Only administrators can access the key vault and partner secrets.</p>
+    </div>
+
+    <div id="view-admin" class="hidden">
+      <div class="page-header">
+        <h1>Key Vault</h1>
+      </div>
+
+      <div class="card" style="margin-bottom:1rem">
+        <div class="card-title">System Flag</div>
+        <div class="flag-box" id="flag-display"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Managed Signing Keys</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Owner</th>
+                <th>Scope</th>
+                <th>Last Rotation</th>
+              </tr>
+            </thead>
+            <tbody id="key-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "chameleon-hashes",
+  "version": "1.0.0",
+  "description": "Lab #3 - CertFlow: RS256 to HS256 confusion (CVE-2016-5431)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "8.5.1"
+  }
+}

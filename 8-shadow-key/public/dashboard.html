@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas - Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e11d48'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>8</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-page">
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Atlas
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/dashboard.html" class="nav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Users
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Audit Log
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+      <div class="nav-section">Administration</div>
+      <a href="/admin.html" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        User Registry
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar" id="avatar">?</div>
+        <div class="user-chip-info">
+          <div class="user-chip-name" id="chip-name">Loading...</div>
+          <div class="user-chip-role" id="chip-role">analyst</div>
+        </div>
+      </div>
+      <button class="btn-ghost" id="logout-btn" style="width:100%">Sign out</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="page-header">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Active Sessions</div>
+        <div class="stat-value">4</div>
+        <div class="stat-sub">across 3 regions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Signing Algorithm</div>
+        <div class="stat-value" style="font-size:1.2rem;padding-top:.3rem">RS256</div>
+        <div class="stat-sub">asymmetric</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Public Key</div>
+        <div class="stat-value" style="font-size:1.2rem;padding-top:.3rem">Internal</div>
+        <div class="stat-sub">not exposed</div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:1rem">
+      <div class="card-title">Your Session Token</div>
+      <div id="token-display" style="font-family:'Courier New',monospace;font-size:11px;word-break:break-all;color:var(--muted);line-height:1.8"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Platform Status</div>
+      <div class="stat-grid" style="margin-bottom:0">
+        <div class="stat-card">
+          <div class="stat-label">JWT Issuer</div>
+          <div class="stat-sub" style="margin-top:.5rem">RS256 - Operational</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Identity Provider</div>
+          <div class="stat-sub" style="margin-top:.5rem">Operational</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">User Registry</div>
+          <div class="stat-sub" style="margin-top:.5rem">Admin access only</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

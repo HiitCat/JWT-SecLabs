@@ -1,0 +1,14 @@
+{
+  "name": "jwk-injection",
+  "version": "1.0.0",
+  "description": "Lab #6 - KeyForge: JWK header injection (CVE-2018-0114)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "node-jose": "0.10.0"
+  }
+}

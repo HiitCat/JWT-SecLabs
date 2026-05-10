@@ -1,0 +1,15 @@
+{
+  "name": "jku-injection",
+  "version": "1.0.0",
+  "description": "Lab #7 - Nexus: JKU header injection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "jwks-rsa": "^3.0.0"
+  }
+}

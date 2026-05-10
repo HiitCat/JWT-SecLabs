@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VaultBox - My Documents</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23d29922'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>3</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-page">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      VaultBox
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/dashboard.html" class="nav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        My Documents
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Recent Activity
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Shared with me
+      </a>
+
+      <div class="nav-section">Administration</div>
+      <a href="/admin.html" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Admin Console
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar" id="avatar">?</div>
+        <div class="user-chip-info">
+          <div class="user-chip-name" id="chip-name">Loading…</div>
+          <div class="user-chip-role" id="chip-role">user</div>
+        </div>
+      </div>
+      <button class="btn-ghost" id="logout-btn" style="width:100%">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-header">
+      <h1>My Documents</h1>
+      <button class="btn-sm">+ New Document</button>
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-card">
+        <div class="doc-icon">📊</div>
+        <div class="doc-name">Q3 Financial Report</div>
+        <div class="doc-meta">Modified 2 days ago</div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📝</div>
+        <div class="doc-name">Product Roadmap 2024</div>
+        <div class="doc-meta">Modified 5 days ago</div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🔐</div>
+        <div class="doc-name">Security Audit Notes</div>
+        <div class="doc-meta">Modified 1 week ago</div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📋</div>
+        <div class="doc-name">Employee Handbook</div>
+        <div class="doc-meta">Modified 2 weeks ago</div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">📈</div>
+        <div class="doc-name">Marketing Strategy</div>
+        <div class="doc-meta">Modified 3 weeks ago</div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon">🗂️</div>
+        <div class="doc-name">Legal Contracts</div>
+        <div class="doc-meta">Modified 1 month ago</div>
+      </div>
+    </div>
+
+    <div class="storage-section">
+      <div class="storage-label">
+        <span>Storage used</span>
+        <span id="storage-used">2.4 GB of 10 GB</span>
+      </div>
+      <div class="storage-bar">
+        <div class="storage-fill" style="width: 24%"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

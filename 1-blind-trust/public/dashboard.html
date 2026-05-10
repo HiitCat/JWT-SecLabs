@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian - Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230891b2'/><text y='22' x='16' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>1</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="app-page">
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      Meridian
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/dashboard.html" class="nav-item active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Overview
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Reports
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        Team
+      </a>
+      <a href="#" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Settings
+      </a>
+      <div class="nav-section">Administration</div>
+      <a href="/admin.html" class="nav-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        User Management
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="avatar" id="avatar">?</div>
+        <div class="user-chip-info">
+          <div class="user-chip-name" id="chip-name">Loading...</div>
+          <div class="user-chip-role" id="chip-role">analyst</div>
+        </div>
+      </div>
+      <button class="btn-ghost" id="logout-btn" style="width:100%">Sign out</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="page-header"><h1>Overview</h1></div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Reports This Week</div>
+        <div class="stat-value">14</div>
+        <div class="stat-sub">+3 from last week</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Active Workspaces</div>
+        <div class="stat-value">6</div>
+        <div class="stat-sub">across 3 projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Data Sources</div>
+        <div class="stat-value">11</div>
+        <div class="stat-sub">all connected</div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:1rem">
+      <div class="card-title">Current Session</div>
+      <div id="welcome-line" style="font-size:14px;color:var(--muted)"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Recent Activity</div>
+      <div class="activity-list">
+        <div class="activity-item"><div class="activity-dot"></div><span>Q1 revenue report exported</span><span class="activity-time">2h ago</span></div>
+        <div class="activity-item"><div class="activity-dot"></div><span>Data source "CRM" reconnected</span><span class="activity-time">5h ago</span></div>
+        <div class="activity-item"><div class="activity-dot"></div><span>New workspace "Product" created</span><span class="activity-time">1d ago</span></div>
+        <div class="activity-item"><div class="activity-dot"></div><span>Scheduled digest sent to 4 members</span><span class="activity-time">2d ago</span></div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
