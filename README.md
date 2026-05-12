@@ -16,7 +16,7 @@ Break things. Understand why. Do better.
 
 ## What's this?
 
-No boring slides. No multiple-choice quizzes. Just real exploits on real (broken) code.
+Real exploits on real - broken - authentication code.
 
 Each lab is a self-contained Docker app that teaches one JWT attack vector end-to-end: read the vuln, run the exploit, get the flag.
 
@@ -24,16 +24,16 @@ Each lab is a self-contained Docker app that teaches one JWT attack vector end-t
 
 ## Labs
 
-| # | Name | Vulnerability | Difficulty |
-|---|------|--------------|:----------:|
-| 1 | [Blind Trust](./1-blind-trust/) | Unverified JWT Signature | 🟢 Easy |
-| 2 | [Voiding The Rules](./2-voiding-the-rules/) | `alg: none` Bypass | 🟢 Easy |
-| 3 | [Secrets Under The Rug](./3-secrets-under-the-rug/) | Weak HMAC Secret | 🟡 Medium |
-| 4 | [Chameleon Hashes](./4-chameleon-hashes/) | RS256 -> HS256 Confusion | 🟠 Hard |
-| 5 | [Wrong Turn](./5-wrong-turn/) | `kid` Header Path Traversal | 🟠 Hard |
-| 6 | [Trojan Keys](./6-trojan-keys/) | JWK Header Injection | 🔴 Expert |
-| 7 | [Puppet Master](./7-puppet-master/) | JKU Header Injection | 🔴 Expert |
-| 8 | [Shadow Key](./8-shadow-key/) | Algorithm Confusion + Public Key Recovery | 🔴 Expert |
+| Name | Vulnerability | Difficulty |
+|------|--------------|:----------:|
+| [Blind Trust](./1-blind-trust/) | Unverified JWT Signature | 🟢 Easy |
+| [Voiding The Rules](./2-voiding-the-rules/) | `alg: none` Bypass | 🟢 Easy |
+| [Secrets Under The Rug](./3-secrets-under-the-rug/) | Weak HMAC Secret | 🟡 Medium |
+| [Chameleon Hashes](./4-chameleon-hashes/) | RS256 -> HS256 Confusion | 🟠 Hard |
+| [Wrong Turn](./5-wrong-turn/) | `kid` Header Path Traversal | 🟠 Hard |
+| [Trojan Keys](./6-trojan-keys/) | JWK Header Injection | 🔴 Expert |
+| [Puppet Master](./7-puppet-master/) | JKU Header Injection | 🔴 Expert |
+| [Shadow Key](./8-shadow-key/) | Algorithm Confusion + Public Key Recovery | 🔴 Expert |
 
 ---
 
@@ -76,11 +76,3 @@ Work through the labs in order - each one builds on the previous:
 ## Contributing
 
 PRs welcome. See [CONTRIBUTORS.md](./CONTRIBUTORS.md) for guidelines.
-
----
-
-<div align="center">
-
-*"Don't trust what you didn't sign. Don't sign what you didn't validate."*
-
-</div>

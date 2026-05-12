@@ -4,7 +4,7 @@
 
 ## Vulnerability
 
-HMAC-based JWT signing (HS256) is only as strong as its secret. If the secret is weak — say, `password`, `secret`, or `123456` — an attacker with any valid token can brute-force it **offline** in seconds, then forge arbitrary payloads.
+HMAC-based JWT signing (HS256) is only as strong as its secret. If the secret is weak - say, `password`, `secret`, or `123456` - an attacker with any valid token can brute-force it **offline** in seconds, then forge arbitrary payloads.
 
 No network noise. No account lockouts. Just a wordlist and a CPU.
 

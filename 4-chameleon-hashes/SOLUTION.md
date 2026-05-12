@@ -8,7 +8,7 @@ jwt.verify(token, PUBLIC_KEY, {
 });
 ```
 
-The `algorithms` array allows both RS256 (asymmetric) and HS256 (symmetric). `jsonwebtoken@8.5.1` does not validate key types — it will use any PEM string as an HS256 HMAC secret without complaint. When an HS256 token arrives, the server computes `HMAC-SHA256(PUBLIC_KEY_PEM, header.payload)` and compares it to the signature. An attacker who has the public key can compute the same HMAC.
+The `algorithms` array allows both RS256 (asymmetric) and HS256 (symmetric). `jsonwebtoken@8.5.1` does not validate key types - it will use any PEM string as an HS256 HMAC secret without complaint. When an HS256 token arrives, the server computes `HMAC-SHA256(PUBLIC_KEY_PEM, header.payload)` and compares it to the signature. An attacker who has the public key can compute the same HMAC.
 
 The public key is not secret. It is, by design, public. Exposing it on `/.well-known/jwks.json` for legitimate RS256 verification also hands the attacker everything they need.
 

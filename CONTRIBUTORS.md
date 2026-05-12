@@ -1,15 +1,21 @@
-# Contributors ✨
+# Contributors
 
-This project exists thanks to all the people who contribute. We appreciate any contribution made to this project and we are grateful for the enthusiasm and dedication of all contributors! 🎉
+JWT-SecLabs is maintained as an educational project for learning JWT security issues through hands-on labs.
 
-For now, our list of contributors is quite short, but we hope it will grow over time!
+## How to contribute
 
-## Project Maintainer and Main Contributor:
+Contributions are welcome when they improve the quality, accuracy, or usability of the labs.
 
-- **HitCat** - *Initial work* - [HiitCat](https://github.com/HiitCat)
+Useful contributions include:
 
-Remember, contributions are not only about code. You can help by suggesting new features, improving documentation, reporting bugs, or even by giving us feedback on our work. Every contribution matters! 💖
+- Fixing bugs in a lab or its Docker setup
+- Improving explanations, hints, or solution walkthroughs
+- Adding tests or making existing checks more reliable
+- Reporting unclear behavior or documentation gaps
+- Proposing new JWT-focused lab ideas
 
-If you want to contribute, please check our [README](https://github.com/HiitCat/JWT-SecLabs/tree/main/README.md) for instructions on how to do so. If you have contributed to this project and your name is not on the list, please feel free to add yourself!
+Before opening a pull request, please make sure the affected lab still builds and runs locally. If your change touches several labs, run the relevant checks and mention what you tested in the pull request.
 
-We're looking forward to growing this list with your name on it! 😄
+## Adding yourself
+
+If you make a meaningful contribution, feel free to add your name or GitHub handle to this file in the same style as the maintainer entry.
